@@ -22,8 +22,8 @@ const getCv = () =>{
   terminal.insertAdjacentHTML("beforeend", 
         `<p class="result cvresult">${data[language].cv}</p>`);
   const a = document.createElement("a");
-  a.href = "ressources/CV -  Guillaume REYGNER.pdf";
-  a.setAttribute("download", "CV -  Guillaume REYGNER.pdf");
+  a.href = "resources/CV -  Ayush Garg.pdf";
+  a.setAttribute("download", "CV -  Ayush Garg.pdf");
   a.setAttribute("target", "blank");
   a.click();
 }
@@ -32,7 +32,7 @@ const getLinkedin = () =>{
   terminal.insertAdjacentHTML("beforeend", 
         `<p class="result redirectresultLinkedin">${data[language].redirectLinkedin}</p>`);
   const a = document.createElement("a");
-  a.href = "https://www.linkedin.com/in/guillaume-reygner/";
+  a.href = "https://www.linkedin.com/in/ayush--garg/";
   a.setAttribute("target", "blank");
   a.click();
 }
@@ -41,7 +41,7 @@ const getGithub = () =>{
   terminal.insertAdjacentHTML("beforeend", 
         `<p class="result redirectresultGithub">${data[language].redirectGithub}</p>`);
   const a = document.createElement("a");
-  a.href = "https://github.com/guillaume-rygn";
+  a.href = "https://github.com/ayushgarg2702";
   a.setAttribute("target", "blank");
   a.click();
 }
@@ -76,24 +76,10 @@ const website = (result) =>{
           `${data[language].website}`);
   const a = document.createElement("a");
 
-  if(result === "mes-projets[1].website" || result === "my-projects[1].website"){
-    a.href = "https://catshop-io.herokuapp.com/";
-  } else if (result === "mes-projets[2].website" || result === "my-projects[2].website"){
-    a.href = "https://guillaume-rygn.github.io/Kata-Temple/";
-  } else if (result === "mes-projets[3].website" || result === "my-projects[3].website"){
-    a.href = "https://scoreit-thp.herokuapp.com/";
-  } else if (result === "mes-projets[4].website" || result === "my-projects[4].website"){
-    a.href = "https://guillaume-rygn.github.io/Monolith-Arena/";
-  } else if (result === "mes-projets[5].website" || result === "my-projects[5].website"){
-    a.href = "https://guillaume-rygn.github.io/MyDarkTheme.JS/";
-  } else if (result === "mes-projets[6].website" || result === "my-projects[6].website"){
-    a.href = "https://guillaume-rygn.github.io/EmojiFace/";
-  } else if (result === "mes-projets[7].website" || result === "my-projects[7].website"){
-    a.href = "https://www.guillaumereygner.fr/";
-  } else if (result === "mes-projets[8].website" || result === "my-projects[8].website"){
-    a.href = "https://www.goyoulearn.com/";
-  } else if (result === "mes-projets[9].website" || result === "my-projects[9].website"){
-    a.href = "https://guillaume-rygn.github.io/FindHouse/";
+  if(result === "my-projects[1].website"){
+    a.href = "https://github.com/ayushgarg2702/LogPipeLine";
+  } else if (result === "my-projects[2].website"){
+    a.href = "https://github.com/mechiragjain/social-ecommerce";
   }
   a.setAttribute("target", "blank");
   a.click();
@@ -150,7 +136,7 @@ const ls = (y, result, secret) =>{
     terminal.insertAdjacentHTML("beforeend", 
           `<div class="result ls">
             <div>list-secret</div>
-            <div><code>Guillaume REYGNER</code></div>
+            <div><code>Ayush Garg</code></div>
           </div>`);
   } else if (y === -1 && result === "ls -a"){
     terminal.insertAdjacentHTML("beforeend",  
@@ -158,7 +144,7 @@ const ls = (y, result, secret) =>{
       <div><code>.</code></div>
       <div><code>.secret</code></div>
       <div>list-secret</div>
-      <div><code>Guillaume REYGNER</code></div>
+      <div><code>Ayush Garg</code></div>
     </div>`);
   }
 }

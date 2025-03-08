@@ -541,10 +541,10 @@ u{
   display: none;
 }
 
-#french, #english{
+#english{
   cursor: pointer;
 }
 
-#french:hover, #english:hover{
+#english:hover{
   color : var(--text-accent-color);
 }

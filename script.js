@@ -100,11 +100,16 @@ function logKey(e){
     e.preventDefault();
   }
 
+  if(e.key === 'c' && e.ctrlKey){
+    e.preventDefault();
+    input.value = "";
+  }
+
 
   if (e.key === 'Tab'){
     if (y === -1){
       if(result[0] === "g"){
-        input.value = "Guillaume\\ REYGNER/";
+        input.value = "Ayush\\ Garg/";
       }
       if(result[0] === "c"){
         input.value = "cd ";
@@ -112,8 +117,8 @@ function logKey(e){
       if(result.includes("cd .")){
         input.value = "cd .secret";
       }
-      if(result.includes("cd g")){
-        input.value = "cd Guillaume\\ REYGNER/";
+      if(result.includes("cd a")){
+        input.value = "cd Ayush\\ Garg/";
       } 
       if(result[0] === "c" && !result.includes(" ") && result[1] !== "d"){
         input.value = "clear";
@@ -122,9 +127,7 @@ function logKey(e){
         input.value = "list-secret";
       }
     } else if (y === 0){
-      if(result[0] === "a" && language === "french"){
-        input.value = "a-propos";
-      } else if (result[0] === "a" && language === "english"){
+      if (result[0] === "a"){
         input.value = "about-me";
       }
       if(result[0] === "c" && !result.includes(" ") && result[1] !== "d"){
@@ -139,25 +142,16 @@ function logKey(e){
       if(result[0] === "e"){
         input.value = "experiences";
       }
-      if(result.includes("mes-projets[") && !result.includes("]") && typeof result[12] !== "undefined" &&result[12].match(/\d/) && language === 'french'){
+      if(result.includes("my-projects[") && !result.includes("]") && typeof result[12] !== "undefined" &&result[12].match(/\d/)){
         input.value = `${result}]`;
       }
-      if(result.includes("my-projects[") && !result.includes("]") && typeof result[12] !== "undefined" &&result[12].match(/\d/) && language === 'english'){
-        input.value = `${result}]`;
-      }
-      if(result.includes("mes-projets") && !result.includes("mes-projets[") && language === 'french'){
-        input.value = "mes-projets[";
-      }
-      if(result.includes("my-projects") && !result.includes("my-projects[") && language === 'english'){
+      if(result.includes("my-projects") && !result.includes("my-projects[") ){
         input.value = "my-projects[";
       }
-      if(result.includes("mes-projets[") || result.includes("my-projects[")){
+      if(result.includes("my-projects[")){
         if(result.includes("]") && !result.includes(".website") && result[13] === "]"){      
           input.value = `${result.substr(0,14)}.website`;
         }
-      }
-      if(result[0] === "f"){
-        input.value = "formations";
       }
       if(result[0] === "g"){
         input.value = "get ";
@@ -174,10 +168,7 @@ function logKey(e){
       if(result[0] === "h"){
         input.value = "help";
       }
-      if(result[0] === "m" && result !== "mes-projets" && !result.includes("mes-projets[") && language === "french") {
-        input.value = "mes-projets";
-      }
-      if(result[0] === "m" && result !== "my-projects" && !result.includes("my-projects[") && language === "english") {
+      if(result[0] === "m" && result !== "my-projects" && !result.includes("my-projects[")) {
         input.value = "my-projects";
       }
       if(result[0] === "p"){
@@ -238,7 +229,7 @@ function logKey(e){
 
       if (y === -1){
         
-        if(result === "guillaume reygner" || result === "cd guillaume reygner" || result === "cd guillaume\\ reygner/" || result === "guillaume\\ reygner/" || result === "cd"){
+        if(result === "ayush garg" || result === "cd ayush garg" || result === "cd ayush\\ garg/" || result === "ayush\\ garg/" || result === "cd"){
           y ++;
           terminal.insertAdjacentHTML("beforeend", `<br>`);
           localisation.textContent = "/portfolio";
@@ -295,27 +286,13 @@ function logKey(e){
           getGithub();
         } else if (result === "passions"){
           hobby();
-        } else if (result === "mes-projets" || result === "my-projects"){
+        } else if (result === "my-projects"){
           project();
-        } else if (result === "mes-projets[1].website" || result === "my-projects[1].website"){
+        } else if (result === "my-projects[1].website"){
           website(result);
-        } else if (result === "mes-projets[2].website" || result === "my-projects[2].website"){
+        } else if (result === "my-projects[2].website"){
           website(result);
-        } else if (result === "mes-projets[3].website" || result === "my-projects[3].website"){
-          website(result);
-        } else if (result === "mes-projets[4].website" || result === "my-projects[4].website"){
-          website(result);
-        } else if (result === "mes-projets[5].website" || result === "my-projects[5].website"){
-          website(result);
-        } else if (result === "mes-projets[6].website" || result === "my-projects[6].website"){
-          website(result);
-        } else if (result === "mes-projets[7].website" || result === "my-projects[7].website"){
-          website(result);
-        } else if (result === "mes-projets[8].website" || result === "my-projects[8].website"){
-          website(result);
-        } else if (result === "mes-projets[9].website" || result === "my-projects[9].website"){
-          website(result);
-        } 
+        }
         else if (result === "secrets"){
           secrets();
         } else if (result === "move"){
@@ -412,13 +389,13 @@ function logKey(e){
       }
       if (y === -1){
         terminal = document.getElementById("terminal");
-        terminal.insertAdjacentHTML("beforeend", `<p class="commande" id="answer${i}">Guillaume REYGNER:~$:</p><input type="text" autofocus class="input themeinput" id="input${i}" tabindex="-1">`);
+        terminal.insertAdjacentHTML("beforeend", `<p class="commande" id="answer${i}">Ayush Garg:~$:</p><input type="text" autofocus class="input themeinput" id="input${i}" tabindex="-1">`);
       } else if (y === 1){
         terminal = document.getElementById("terminal");
-        terminal.insertAdjacentHTML("beforeend", `<p class="commande" id="answer${i}">Guillaume REYGNER:~/portfolio/themes$:</p><input type="text" autofocus class="input themeinput" id="input${i}" tabindex="-1">`);
+        terminal.insertAdjacentHTML("beforeend", `<p class="commande" id="answer${i}">Ayush Garg:~/portfolio/themes$:</p><input type="text" autofocus class="input themeinput" id="input${i}" tabindex="-1">`);
       } else {
         terminal = document.getElementById("terminal");
-        terminal.insertAdjacentHTML("beforeend", `<p class="commande" id="answer${i}">Guillaume REYGNER:~/portfolio$</p><input type="text" autofocus class="input" id="input${i}" tabindex="-1">`);
+        terminal.insertAdjacentHTML("beforeend", `<p class="commande" id="answer${i}">Ayush Garg:~/portfolio$</p><input type="text" autofocus class="input" id="input${i}" tabindex="-1">`);
       }
       document.getElementById(`input${i}`).focus();
       if (document.getElementById(`input${i}`).classList.contains("themeinput") && y === -1){
@@ -432,9 +409,3 @@ function logKey(e){
     }
   }
 }
-
-
-
-
-
-

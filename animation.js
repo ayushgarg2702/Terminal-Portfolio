@@ -52,27 +52,27 @@ const onDrag = ({movementX, movementY}) =>{
 const moveBg = (historic, result, y) =>{
   if (result === "move" && document.body.classList.contains("animateBg")){
     terminal = document.getElementById("terminal");
-    terminal.insertAdjacentHTML("beforeend", `<p class="result">l'animation du background est deja active. Pour desactiver cette derniere utilisez la commande <code>remove</code>.</p>`);
+    terminal.insertAdjacentHTML("beforeend", `<p class="result">The background animation is already active. To deactivate it use the command <code>remove</code>.</p>`);
   } 
   else if (result === "move"){
     document.body.classList.toggle("animateBg");
     terminal = document.getElementById("terminal");
-    terminal.insertAdjacentHTML("beforeend", `<p class="result">Vous venez d'activer l'animation du background pour désactiver cette derniere utilisez la commande <code>remove</code>.</p>`);
+    terminal.insertAdjacentHTML("beforeend", `<p class="result">You have just activated the background animation to deactivate the latter use the command <code>remove</code>.</p>`);
   }  
   else if (result === "remove" && document.body.classList.contains("animateBg")){
     document.body.classList.toggle("animateBg");
     terminal = document.getElementById("terminal");
-    terminal.insertAdjacentHTML("beforeend", `<p class="result">Vous venez de désactiver l'animation du background pour activer cette derniere utilisez la commande <code>move</code>.</p>`);
+    terminal.insertAdjacentHTML("beforeend", `<p class="result">You have just disabled the background animation to enable the latter use the command <code>move</code>.</p>`);
   } else {
     if (y === 1){
       terminal = document.getElementById("terminal");
       terminal.insertAdjacentHTML("beforeend", `<p class="notfound result">${result}: command not found
-      <br><br>Tapez la commande <code>themes</code> pour afficher la liste des themes disponibles.</p><br>
-      <p class="result">/!\\ pour revenir sur le menu principal veuillez utiliser la commande <code>exit</code></p>`);
+      <br><br>Type the command <code>themes</code> to display the list of available themes.</p><br>
+      <p class="result">/!\\ o return to the main menu please use the command <code>exit</code></p>`);
     } else {
       terminal = document.getElementById("terminal");
       terminal.insertAdjacentHTML("beforeend", `<p class="notfound result">${result}: command not found
-          <br><br>Tapez la commande <code>help</code> pour afficher la liste des commandes disponibles.</p>`);
+          <br><br>Type the command <code>help</code> to display the list of available commands.</p>`);
     }
   }
 }
@@ -97,18 +97,18 @@ icon.addEventListener("dblclick", function(){
 <div class="resume">
 <pre>
 
- ______   ______     ______     ______   ______   ______     __         __     ______    
-/\\  == \\ /\\  __ \\   /\\  == \\   /\\__  _\\ /\\  ___\\ /\\  __ \\   /\\ \\       /\\ \\   /\\  __ \\   
-\\ \\  _-/ \\ \\ \\/\\ \\  \\ \\  __<   \\/_/\\ \\/ \\ \\  __\\ \\ \\ \\/\\ \\  \\ \\ \\____  \\ \\ \\  \\ \\ \\/\\ \\  
- \\ \\_\\    \\ \\_____\\  \\ \\_\\ \\_\\    \\ \\_\\  \\ \\_\\    \\ \\_____\\  \\ \\_____\\  \\ \\_\\  \\ \\_____\\ 
-  \\/_/     \\/_____/   \\/_/ /_/     \\/_/   \\/_/     \\/_____/   \\/_____/   \\/_/   \\/_____/ 
-                                                                                   
+     ______   ______     ______     ______   ______   ______     __         __     ______    
+    /\  == \ /\  __ \   /\  == \   /\__  _\ /\  ___\ /\  __ \   /\ \       /\ \   /\  __ \   
+    \ \  _-/ \ \ \/\ \  \ \  __<   \/_/\ \/ \ \  __\ \ \ \/\ \  \ \ \____  \ \ \  \ \ \/\ \  
+     \ \_\    \ \_____\  \ \_\ \_\    \ \_\  \ \_\    \ \_____\  \ \_____\  \ \_\  \ \_____\ 
+      \/_/     \/_____/   \/_/ /_/     \/_/   \/_/     \/_____/   \/_____/   \/_/   \/_____/ 
+                                                                                    
   
 </pre></div>
-        <div>Bienvenue sur mon Portfolio ! Pour afficher les commandes disponibles tapez <code>help</code>. Pour valider chaque commande appuyez sur <em>Entrer</em>, vous pouvez utiliser la touche <em>Tabulation</em> afin de vous aider à compléter une commande.</div>
+        <div> Welcome to my Portfolio! To view available orders type <code>help</code>. To validate each order press <em>Enter</em>, you can use the key <em>Tabulation</em> to help you complete an order.</div>
         <div id="terminal">
           <div>
-            <p class="commande" id="answer${i}">Guillaume REYGNER:~/portfolio$</p>
+            <p class="commande" id="answer${i}">Ayush Garg:~/portfolio$</p>
             <input type="text" class="input" id="input${i}" tabindex="-1">
           </div>
 
