@@ -78,7 +78,8 @@ const dracula = () =>{
   root.style.removeProperty('--terminal-bg');
   root.style.removeProperty('--terminal-header-bg');
   bannerTitle.style.removeProperty('color');
-  if (svg.classList.contains("ligthen")){
+  const svg = document.querySelector("svg"); 
+  if (svg && svg.classList.contains("ligthen")){
     svg.classList.remove("ligthen");
   }
 }
@@ -93,7 +94,8 @@ const dark = () =>{
   root.style.setProperty('--terminal-bg','rgb(0 0 0 / 90%)');
   root.style.setProperty('--terminal-header-bg','#585252');
   bannerTitle.style.color = "#ffca85";
-  if (!svg.classList.contains("ligthen")){
+  const svg = document.querySelector("svg");
+  if (svg && !svg.classList.contains("ligthen")){
     svg.classList.add("ligthen");
   }
 }
@@ -108,7 +110,8 @@ const ubuntu = () =>{
   root.style.setProperty('--terminal-bg','rgba(56, 4, 40, 0.9)');
   bannerTitle.style.color = "#222222";
   root.style.setProperty('--terminal-header-bg','#bbb');
-  if (svg.classList.contains("ligthen")){
+  const svg = document.querySelector("svg");
+  if (svg && svg.classList.contains("ligthen")){
     svg.classList.remove("ligthen");
   }
 }
@@ -123,7 +126,8 @@ const medallion = () =>{
   root.style.setProperty('--terminal-bg','#cac296');
   root.style.setProperty('--terminal-header-bg','#585252');
   bannerTitle.style.color = "#cac296";
-  if (!svg.classList.contains("ligthen")){
+  const svg = document.querySelector("svg");
+  if (svg && !svg.classList.contains("ligthen")){
     svg.classList.add("ligthen");
   }
 }
@@ -138,7 +142,8 @@ const matrix = () =>{
   root.style.setProperty('--terminal-bg','rgb(0 0 0 / 90%)');
   root.style.setProperty('--terminal-header-bg','#585252');
   bannerTitle.style.color = "#00FF41";
-  if (!svg.classList.contains("ligthen")){
+  const svg = document.querySelector("svg");
+  if (svg && !svg.classList.contains("ligthen")){
     svg.classList.add("ligthen");
   }
 }
@@ -153,7 +158,8 @@ const helloKitty = () =>{
   root.style.setProperty('--terminal-bg','#F2F2F2');
   root.style.setProperty('--terminal-header-bg','#E77ED0');
   bannerTitle.style.color = "#F2F2F2";
-  if (!svg.classList.contains("ligthen")){
+  const svg = document.querySelector("svg");
+  if (svg && !svg.classList.contains("ligthen")){
     svg.classList.add("ligthen");
   }
 }
