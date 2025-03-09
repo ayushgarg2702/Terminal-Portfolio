@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://www.ayushgarg.fr/"><img src="images/terminal.png" alt="Portfolio" width="200"></a>
+  <a href="meayushgarg.netlify.app"><img src="images/terminal.png" alt="Portfolio" width="200"></a>
   <br>
 Portfolio Terminal<br>
 </h1>
@@ -12,7 +12,7 @@ Portfolio Terminal<br>
 
 ## WEB version 🌐
 
-The site is live here 👉 [portfolio](https://www.ayushgarg.fr/)
+The site is live here 👉 [portfolio](meayushgarg.netlify.app)
 
 ## Technologies utilisées ⚙️
 
